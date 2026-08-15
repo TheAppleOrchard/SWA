@@ -175,22 +175,6 @@ nav a:hover {
     color: white;
 }
 
-
-.admission-label {
-    display: inline-block;
-
-    background: #e67e22;
-
-    padding: 8px 15px;
-
-    border-radius: 30px;
-
-    font-weight: bold;
-
-    margin-bottom: 20px;
-}
-
-
 .hero h1 {
     font-size: 60px;
     line-height: 1.15;
