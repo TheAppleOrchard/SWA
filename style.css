@@ -620,41 +620,6 @@ nav a:hover {
 }
 
 
-/* ==============================
-   BLOG
-============================== */
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-
-.blog-card {
-    border: 1px solid #e5e5e5;
-    padding: 30px;
-    border-radius: 15px;
-}
-
-
-.blog-card > span {
-    color: #e67e22;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-
-.blog-card h3 {
-    margin: 12px 0;
-}
-
-
-.blog-card a {
-    color: #e67e22;
-    font-weight: bold;
-}
-
 
 /* ==============================
    VIDEOS
