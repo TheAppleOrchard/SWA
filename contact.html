@@ -12,9 +12,9 @@
         Contact Us | Student's Welfare Academy
     </title>
 
-    <!-- Website Logo / Favicon -->
-  <link rel="icon" type="image/png" href="Images/logo.png"> 
-
+    <link rel="icon"
+          type="image/png"
+          href="Images/logo.png">
 
     <meta name="description"
           content="Contact Student's Welfare Academy for admission, courses, student guidance and educational information.">
@@ -27,6 +27,7 @@
 
 <body>
 
+
 <!-- ==================================================
      NAVIGATION
 ================================================== -->
@@ -36,6 +37,7 @@
     <div class="container navbar">
 
         <!-- LOGO -->
+
         <div class="logo-area">
 
             <a href="index.html">
@@ -61,6 +63,7 @@
 
 
         <!-- MOBILE MENU BUTTON -->
+
         <button class="menu-button"
                 onclick="openMenu()"
                 aria-label="Open Menu">
@@ -70,7 +73,8 @@
         </button>
 
 
-        <!-- NAVIGATION LINKS -->
+        <!-- NAVIGATION -->
+
         <nav id="main-menu">
 
             <a href="index.html">
@@ -80,15 +84,15 @@
             <a href="about.html">
                 About Us
             </a>
+
             <a href="videos.html">
                 Videos
-            </a>   
+            </a>
+
             <a href="contact.html"
                class="active">
                 Contact
             </a>
-
-            
 
         </nav>
 
@@ -116,39 +120,114 @@
                 CONTACT US
             </span>
 
-            <h1>
+            <h2>
                 Get In Touch With Us
-            </h1>
+            </h2>
 
             <p>
                 Have a question about our courses, admissions
-                or student guidance? Contact Student's Welfare Academy.
+                or student guidance? Contact Student's Welfare
+                Academy.
             </p>
 
         </div>
 
 
+        <!-- CONTACT CARDS -->
 
-        <div class="footer-contact">
+        <div class="contact-grid">
 
-    <div class="footer-contact-item">
-        <span class="icon">📞</span>
-        <span class="contact-text">9805868614</span>
+
+            <!-- PHONE -->
+
+            <div class="contact-card">
+
+                <div>
+                    📞
+                </div>
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    9805868614
+                </p>
+
+                <a href="tel:9805868614">
+                    Call Us
+                </a>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <div>
+                    📧
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    studentswelfareacademy@gmail.com
+                </p>
+
+                <a href="mailto:studentswelfareacademy@gmail.com">
+                    Send Email
+                </a>
+
+            </div>
+
+
+            <!-- REGISTRATION -->
+
+            <div class="contact-card">
+
+                <div>
+                    📋
+                </div>
+
+                <h3>
+                    Registration
+                </h3>
+
+                <p>
+                    HPCD-20185
+                </p>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="contact-card">
+
+                <div>
+                    📍
+                </div>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Near Punjab National Bank Jubbal,
+                    Distt. Shimla, Himachal Pradesh, India
+                </p>
+
+            </div>
+
+
+        </div>
+
     </div>
 
-    <div class="footer-contact-item">
-        <span class="icon">📧</span>
-        <span class="contact-text">
-            studentswelfareacademy@gmail.com
-        </span>
-    </div>
-
-    <div class="footer-contact-item">
-        <span class="icon">📋</span>
-        <span class="contact-text">HPCD-20185</span>
-    </div>
-
-</div>
+</section>
 
 
 
@@ -178,7 +257,6 @@
         </div>
 
 
-
         <!-- QUICK LINKS -->
 
         <div>
@@ -195,16 +273,15 @@
                 About Us
             </a>
 
-           
-
-           
+            <a href="videos.html">
+                Videos
+            </a>
 
             <a href="contact.html">
                 Contact
             </a>
 
         </div>
-
 
 
         <!-- CONTACT -->
@@ -230,17 +307,14 @@
         </div>
 
 
-
         <!-- WEBSITE -->
 
         <div>
 
-          
         </div>
 
 
     </div>
-
 
 
     <!-- COPYRIGHT -->
@@ -266,7 +340,7 @@ function openMenu() {
 
     const menu = document.getElementById("main-menu");
 
-    menu.classList.toggle("show");
+    menu.classList.toggle("active");
 
 }
 
