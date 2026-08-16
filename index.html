@@ -1,10 +1,8 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <meta name="google-site-verification" content="FDRRtMJQo3AKLERqHvu9DEMoklnIN47HtuqQUd3lHJ0" />
-    <meta name="msvalidate.01" content="2B97B4DD3DBA29CE395C017B650B9649" />
 
     <meta charset="UTF-8">
 
@@ -14,8 +12,6 @@
     <title>
         Student's Welfare Academy
     </title>
-
-    <link rel="icon" type="image/png" href="Images/logo.png">
 
     <meta name="description"
           content="Student's Welfare Academy - Quality Education, Competitive Examination Preparation and Student Guidance">
@@ -28,7 +24,30 @@
 
 <body>
 
-    <!-- ==================================================
+
+<!-- ==================================================
+     TOP BAR
+================================================== -->
+
+<div class="top-bar">
+
+    <div class="container top-content">
+
+        <div>
+            📞 9805868614
+        </div>
+
+        <div>
+            📧 studentswelfareacademy@gmail.com
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
      NAVIGATION
 ================================================== -->
 
@@ -36,10 +55,17 @@
 
     <div class="container navbar">
 
+
+        <!-- LOGO -->
+
         <div class="logo-area">
 
-            <img src="Images/logo.png"
-                 alt="Student's Welfare Academy Logo">
+            <a href="index.html">
+
+                <img src="images/logo.png"
+                     alt="Student's Welfare Academy Logo">
+
+            </a>
 
             <div>
 
@@ -56,45 +82,38 @@
         </div>
 
 
+
+        <!-- MOBILE MENU -->
+
         <button class="menu-button"
-                onclick="openMenu()">
+                onclick="openMenu()"
+                aria-label="Open navigation menu">
 
             ☰
 
         </button>
 
 
+
+        <!-- ONLY 4 NAVIGATION BUTTONS -->
+
         <nav id="navigation">
 
-            <a href="#home">
+            <a href="index.html"
+               class="active">
                 Home
             </a>
 
-            <a href="#about">
+            <a href="about.html">
                 About Us
             </a>
 
-            <a href="#courses">
-                Courses
-            </a>
-
-            <a href="#achievements">
-                Achievements
-            </a>
-
-            <a href="#videos">
+            <a href="videos.html">
                 Videos
             </a>
 
-            <a href="#contact">
+            <a href="contact.html">
                 Contact Us
-            </a>
-
-            <a href="#registration"
-               class="nav-register">
-
-                Register Now
-
             </a>
 
         </nav>
@@ -117,6 +136,10 @@
     <div class="container hero-content">
 
         <div class="hero-text">
+
+            <span class="admission-label">
+                🎓 ADMISSIONS OPEN
+            </span>
 
             <h1>
 
@@ -150,17 +173,6 @@
                    class="btn secondary">
 
                     Explore Courses
-<style>
-.hero {
-    background-image:
-        linear-gradient(rgba(20, 40, 55, 0.65), rgba(20, 40, 55, 0.65)),
-        url("Images/hero.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-</style>
 
                 </a>
 
@@ -181,6 +193,7 @@
 <section class="statistics">
 
     <div class="container stats-grid">
+
 
         <div class="stat-box">
 
@@ -233,134 +246,10 @@
 
         </div>
 
+
     </div>
 
 </section>
-
-
-
-<!-- ==================================================
-     ABOUT SECTION
-================================================== -->
-
-<section id="about"
-         class="section">
-
-    <div class="container about-grid">
-
-
-        <div class="about-image">
-
-            <img src="Images/about.png"
-                 alt="Student's Welfare Academy">
-
-        </div>
-
-
-        <div class="about-content">
-
-            <span class="section-title">
-                ABOUT US
-            </span>
-
-            <h2>
-
-                Building Knowledge.
-                Building Confidence.
-
-            </h2>
-
-            <p>
-
-                
-
-                Student's Welfare Academy is committed
-                to providing quality education and
-                guidance to students for their academic
-                and career development.
-
-            </p>
-
-            <p>
-
-                Our aim is to provide students with
-                a supportive learning environment,
-                experienced guidance and the right
-                educational resources.
-
-            </p>
-
-
-            <div class="about-points">
-
-                <div>
-                    ✓ Experienced Faculty
-                </div>
-
-                <div>
-                    ✓ Quality Study Material
-                </div>
-
-                <div>
-                    ✓ Regular Tests
-                </div>
-
-                <div>
-                    ✓ Personal Guidance
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <div class="about-container">
-
-        <!-- About Academy -->
-        <div class="about-content">
-           <p>
-                We offer coaching for <strong>Classes 4th to 12th</strong>, along with specialized
-                preparation for <strong>JNVST (Jawahar Navodaya Vidyalaya), Sainik School,
-                Military School, Olympiads, Government Job Examinations, Banking</strong>, and
-                other competitive entrance examinations. Our experienced faculty, student-focused
-                teaching methodology, regular assessments, and personalized mentoring ensure that
-                every learner receives the attention they deserve.
-            </p>
-
-            <p>
-                At <strong>Student's Welfare Academy</strong>, we believe that education is not
-                just about scoring marks—it's about developing skills, values, critical thinking,
-                and lifelong confidence. We strive to create a supportive learning environment
-                where every student can unlock their full potential.
-            </p>
-        </div>
-
-      
-
-                <!-- Instructor 1 -->
-                <div class="instructor">
-                    <img src="Images/manoj.png" alt="Manoj Kheuta">
-                    <div class="instructor-info">
-                        <h3>Manoj Kheuta</h3>
-                        <span>Founder / CEO</span>
-                    </div>
-                </div>
-
-                               <!-- Instructor 4 -->
-                <div class="instructor">
-                    <img src="Images/shubham.jpg" alt="Shubham Kheuta">
-                    <div class="instructor-info">
-                        <h3>Shubham Kheuta</h3>
-                        <span>Managing Director</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-    
 
 
 
@@ -392,8 +281,11 @@
         </div>
 
 
+
         <div class="course-grid">
 
+
+            <!-- COURSE 1 -->
 
             <div class="course-card">
 
@@ -406,10 +298,8 @@
                 </h3>
 
                 <p>
-
                     Complete academic coaching
                     for school students.
-
                 </p>
 
                 <a href="#registration">
@@ -419,6 +309,8 @@
             </div>
 
 
+
+            <!-- COURSE 2 -->
 
             <div class="course-card">
 
@@ -431,11 +323,9 @@
                 </h3>
 
                 <p>
-
                     Focused preparation for
                     Himachal Pradesh competitive
                     examinations.
-
                 </p>
 
                 <a href="#registration">
@@ -445,6 +335,8 @@
             </div>
 
 
+
+            <!-- COURSE 3 -->
 
             <div class="course-card">
 
@@ -457,10 +349,8 @@
                 </h3>
 
                 <p>
-
                     Preparation for Jawahar
                     Navodaya Vidyalaya entrance.
-
                 </p>
 
                 <a href="#registration">
@@ -470,6 +360,8 @@
             </div>
 
 
+
+            <!-- COURSE 4 -->
 
             <div class="course-card">
 
@@ -482,10 +374,8 @@
                 </h3>
 
                 <p>
-
                     Entrance examination
                     preparation for students.
-
                 </p>
 
                 <a href="#registration">
@@ -495,6 +385,8 @@
             </div>
 
 
+
+            <!-- COURSE 5 -->
 
             <div class="course-card">
 
@@ -507,10 +399,8 @@
                 </h3>
 
                 <p>
-
                     Develop strong fundamentals
                     and competitive skills.
-
                 </p>
 
                 <a href="#registration">
@@ -520,6 +410,8 @@
             </div>
 
 
+
+            <!-- COURSE 6 -->
 
             <div class="course-card">
 
@@ -532,10 +424,8 @@
                 </h3>
 
                 <p>
-
                     Competitive examination
                     preparation and guidance.
-
                 </p>
 
                 <a href="#registration">
@@ -561,6 +451,7 @@
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <span class="section-title">
@@ -572,6 +463,7 @@
             </h2>
 
         </div>
+
 
 
         <div class="features">
@@ -683,12 +575,13 @@
         </div>
 
 
+
         <div class="achievement-grid">
 
 
             <div class="achievement-card">
 
-                <img src="Images/student1.jpg"
+                <img src="images/student1.jpg"
                      alt="Student Achievement">
 
                 <div class="achievement-content">
@@ -698,11 +591,9 @@
                     </h3>
 
                     <p>
-
                         Our students continue to
                         achieve success through
                         dedication and hard work.
-
                     </p>
 
                 </div>
@@ -713,7 +604,7 @@
 
             <div class="achievement-card">
 
-                <img src="Images/student2.png"
+                <img src="images/student2.png"
                      alt="Student Achievement">
 
                 <div class="achievement-content">
@@ -723,10 +614,8 @@
                     </h3>
 
                     <p>
-
                         Celebrating the achievements
                         of our talented students.
-
                     </p>
 
                 </div>
@@ -737,7 +626,7 @@
 
             <div class="achievement-card">
 
-                <img src="Images/student3.png"
+                <img src="images/student3.png"
                      alt="Student Achievement">
 
                 <div class="achievement-content">
@@ -747,10 +636,8 @@
                     </h3>
 
                     <p>
-
                         Inspiring students to reach
                         their highest potential.
-
                     </p>
 
                 </div>
@@ -799,13 +686,12 @@
 
 
 
-
 <!-- ==================================================
-     VIDEOS
+     BLOG / LATEST NEWS
 ================================================== -->
 
-<section id="videos"
-         class="section light">
+<section id="blog"
+         class="section">
 
     <div class="container">
 
@@ -813,38 +699,87 @@
         <div class="section-heading">
 
             <span class="section-title">
-                OUR VIDEOS
+                LATEST NEWS
             </span>
 
             <h2>
-                Watch Our Latest Videos
+                From Our Academy
             </h2>
 
         </div>
 
 
-        <div class="video-grid">
 
-            <div class="video">
-
-                <iframe
-                    src="https://www.youtube.com/embed/ifBmN4zAwCY"
-                    title="Student's Welfare Academy"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
+        <div class="blog-grid">
 
 
-            <div class="video">
+            <article class="blog-card">
 
-                <iframe
-                    src="https://www.youtube.com/embed/ZcQHLMCkoTo"
-                    title="Student's Welfare Academy"
-                    allowfullscreen>
-                </iframe>
+                <span>
+                    ADMISSION
+                </span>
 
-            </div>
+                <h3>
+                    Admissions Open
+                </h3>
+
+                <p>
+                    Admissions are open for
+                    upcoming batches.
+                </p>
+
+                <a href="#registration">
+                    Register Now →
+                </a>
+
+            </article>
+
+
+
+            <article class="blog-card">
+
+                <span>
+                    EXAMINATION
+                </span>
+
+                <h3>
+                    HP Patwari Preparation
+                </h3>
+
+                <p>
+                    Start your preparation with
+                    proper guidance and practice.
+                </p>
+
+                <a href="#registration">
+                    Join Course →
+                </a>
+
+            </article>
+
+
+
+            <article class="blog-card">
+
+                <span>
+                    ACHIEVEMENT
+                </span>
+
+                <h3>
+                    Student Success Stories
+                </h3>
+
+                <p>
+                    Celebrating our students'
+                    academic achievements.
+                </p>
+
+                <a href="#achievements">
+                    View Achievements →
+                </a>
+
+            </article>
+
 
         </div>
 
@@ -875,10 +810,8 @@
             </h2>
 
             <p>
-
                 Fill out the form and our academy
                 team will contact you.
-
             </p>
 
             <br>
@@ -890,28 +823,33 @@
         </div>
 
 
+
         <form class="registration-form"
               onsubmit="submitForm(event)">
 
 
             <input
                 type="text"
+                name="student_name"
                 placeholder="Student Name"
                 required>
 
 
             <input
                 type="tel"
+                name="mobile"
                 placeholder="Mobile Number"
                 required>
 
 
             <input
                 type="email"
+                name="email"
                 placeholder="Email Address">
 
 
-            <select required>
+            <select name="course"
+                    required>
 
                 <option value="">
                     Select Course
@@ -945,8 +883,8 @@
 
 
             <textarea
-                placeholder="Message">
-            </textarea>
+                name="message"
+                placeholder="Message"></textarea>
 
 
             <button type="submit"
@@ -965,97 +903,6 @@
 
 
 <!-- ==================================================
-     CONTACT
-================================================== -->
-
-<section id="contact"
-         class="contact-section">
-
-    <div class="container">
-
-
-        <div class="section-heading">
-
-            <span class="section-title">
-                CONTACT US
-            </span>
-
-            <h2>
-                Get In Touch
-            </h2>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-
-            <div class="contact-card">
-
-                <div>
-                    📞
-                </div>
-
-                <h3>
-                    Phone
-                </h3>
-
-                <p>
-                    9805868614
-                </p>
-
-            </div>
-
-
-
-           
-
-
-
-            <div class="contact-card">
-
-                <div>
-                    📋
-                </div>
-
-                <h3>
-                    Registration
-                </h3>
-
-                <p>
-                    HPCD-20185
-                </p>
-
-            </div>
-
-
-
-            <div class="contact-card">
-
-                <div>
-                    📍
-                </div>
-
-                <h3>
-                    Location
-                </h3>
-
-                <p>
-                    Near Punjab National Bank Jubbal, Distt. Shimla, Himachal Pradesh, India
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ==================================================
      FOOTER
 ================================================== -->
 
@@ -1064,6 +911,8 @@
     <div class="container footer-grid">
 
 
+        <!-- ACADEMY -->
+
         <div>
 
             <h2>
@@ -1071,14 +920,15 @@
             </h2>
 
             <p>
-
                 Empowering students through
                 quality education and guidance.
-
             </p>
 
         </div>
 
+
+
+        <!-- QUICK LINKS -->
 
         <div>
 
@@ -1086,24 +936,27 @@
                 Quick Links
             </h3>
 
-            <a href="#home">
+            <a href="index.html">
                 Home
             </a>
 
-            <a href="#about">
+            <a href="about.html">
                 About Us
             </a>
 
-            <a href="#courses">
-                Courses
+            <a href="videos.html">
+                Videos
             </a>
 
-            <a href="#contact">
-                Contact
+            <a href="contact.html">
+                Contact Us
             </a>
 
         </div>
 
+
+
+        <!-- CONTACT -->
 
         <div>
 
@@ -1116,17 +969,37 @@
             </p>
 
             <p>
+                📧 studentswelfareacademy@gmail.com
+            </p>
+
+            <p>
                 📋 HPCD-20185
             </p>
 
         </div>
 
 
-       
+
+        <!-- WEBSITE -->
+
+        <div>
+
+            <h3>
+                Website
+            </h3>
+
+            <p>
+                studentswelfareacademy.net
+            </p>
+
+        </div>
 
 
     </div>
 
+
+
+    <!-- COPYRIGHT -->
 
     <div class="copyright">
 
@@ -1139,19 +1012,19 @@
 
 
 
-<!-- WhatsApp -->
 
-<a href="https://wa.me/919805868614"
-   target="_blank"
-   class="whatsapp">
 
-    WhatsApp
 
-</a>
-
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
 
 <script src="script.js"></script>
+
 
 </body>
 
 </html>
+```
+
+```
