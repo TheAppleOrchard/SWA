@@ -709,60 +709,45 @@ nav a.active {
 /* =========================================================
    CONTACT SECTION - FIXED
 ========================================================= */
+/* =========================================================
+   CONTACT SECTION - TEXT VISIBILITY FIX
+========================================================= */
 
 .contact-section {
-    padding: 80px 0;
     background: #f6f9fc;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 25px;
-    align-items: stretch;
-}
-
-.contact-card {
-    background: #fff;
-    text-align: center;
-    padding: 35px 20px;
-    border-radius: 18px;
-    min-height: 220px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
-}
-
-.contact-card > div {
-    font-size: 35px;
-    line-height: 1;
-    margin-bottom: 18px;
-}
-
-.contact-card h3 {
     color: #111827;
-    font-size: 24px;
-    margin-bottom: 8px;
 }
 
-.contact-card p {
-    color: #222;
+.contact-section .footer-contact,
+.contact-section .footer-contact-item {
+    color: #111827;
+}
+
+.contact-section .footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.contact-section .footer-contact-item .icon {
+    width: 28px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.contact-section .footer-contact-item .contact-text {
+    color: #111827;
     font-size: 17px;
-    margin-bottom: 5px;
-    word-break: break-word;
+    font-weight: 500;
 }
 
-.contact-card a {
-    color: #0000ee;
-    font-size: 17px;
-    transition: color 0.3s ease;
+.contact-section .footer-contact-item a {
+    color: #111827;
 }
 
-.contact-card a:hover {
+.contact-section .footer-contact-item a:hover {
     color: #e67e22;
 }
 
