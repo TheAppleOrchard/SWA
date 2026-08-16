@@ -707,7 +707,7 @@ nav a.active {
 
 
 /* =========================================================
-   CONTACT
+   CONTACT SECTION - FIXED
 ========================================================= */
 
 .contact-section {
@@ -718,25 +718,129 @@ nav a.active {
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
+    gap: 25px;
+    align-items: stretch;
 }
 
 .contact-card {
     background: #fff;
     text-align: center;
-    padding: 30px 15px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 35px 20px;
+    border-radius: 18px;
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
 }
 
 .contact-card > div {
     font-size: 35px;
-    margin-bottom: 10px;
+    line-height: 1;
+    margin-bottom: 18px;
 }
 
 .contact-card h3 {
-    color: #102a43;
+    color: #111827;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #222;
+    font-size: 17px;
     margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.contact-card a {
+    color: #0000ee;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #e67e22;
+}
+
+
+/* =========================================================
+   FOOTER CONTACT - FIXED
+========================================================= */
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.footer-contact-item .icon {
+    flex: 0 0 24px;
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer-contact-item .contact-text {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.footer-contact-item a {
+    color: #fff;
+}
+
+.footer-contact-item a:hover {
+    color: #f5a623;
+}
+
+
+/* =========================================================
+   MOBILE CONTACT
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .contact-card {
+        min-height: 190px;
+        padding: 30px 15px;
+    }
+
+    .contact-card h3 {
+        font-size: 21px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+        font-size: 16px;
+    }
+
 }
 
 
