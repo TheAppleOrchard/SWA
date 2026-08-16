@@ -785,51 +785,248 @@ nav a.active {
 }
 
 
-/* =========================================================
-   CONTACT SECTION - FIXED
-========================================================= */
-/* =========================================================
-   CONTACT SECTION - TEXT VISIBILITY FIX
-========================================================= */
+ /* ==================================================
+    CONTACT SECTION
+================================================== */
 
 .contact-section {
-    background: #f6f9fc;
-    color: #111827;
+    padding: 80px 0;
+    background: #f5f8fc;
 }
 
-.contact-section .footer-contact,
-.contact-section .footer-contact-item {
-    color: #111827;
-}
 
-.contact-section .footer-contact-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 15px;
-}
+/* ==================================================
+   CONTACT HEADING
+================================================== */
 
-.contact-section .footer-contact-item .icon {
-    width: 28px;
-    flex-shrink: 0;
+.contact-section .section-heading {
     text-align: center;
-    font-size: 20px;
+    max-width: 850px;
+    margin: 0 auto 50px;
 }
 
-.contact-section .footer-contact-item .contact-text {
-    color: #111827;
+.contact-section .section-heading h2 {
+    font-size: 42px;
+    margin: 12px 0 18px;
+    color: #071b3a;
+}
+
+.contact-section .section-heading p {
     font-size: 17px;
-    font-weight: 500;
+    line-height: 1.7;
+    color: #53657d;
+    margin: 0 auto;
 }
 
-.contact-section .footer-contact-item a {
-    color: #111827;
+
+/* ==================================================
+   CONTACT GRID
+================================================== */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+
+    width: 100%;
 }
 
-.contact-section .footer-contact-item a:hover {
-    color: #e67e22;
+
+/* ==================================================
+   CONTACT CARD
+================================================== */
+
+.contact-card {
+    background: #ffffff;
+
+    padding: 35px 25px;
+
+    min-height: 250px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e3eaf2;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
+
+/* ==================================================
+   CARD HOVER
+================================================== */
+
+.contact-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==================================================
+   CONTACT ICON
+================================================== */
+
+.contact-icon {
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef4ff;
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ==================================================
+   CARD TITLE
+================================================== */
+
+.contact-card h3 {
+    font-size: 21px;
+
+    margin: 0 0 10px;
+
+    color: #071b3a;
+}
+
+
+/* ==================================================
+   CARD TEXT
+================================================== */
+
+.contact-card p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #53657d;
+
+    margin: 0 0 18px;
+
+    word-break: break-word;
+}
+
+
+/* ==================================================
+   CONTACT BUTTON
+================================================== */
+
+.contact-button {
+    display: inline-block;
+
+    margin-top: auto;
+
+    padding: 10px 22px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    background: #071b3a;
+
+    color: #ffffff;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #123d70;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .contact-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 55px 15px;
+    }
+
+
+    .contact-section .section-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .contact-section .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    .contact-section .section-heading p {
+        font-size: 15px;
+    }
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .contact-card {
+        min-height: 230px;
+
+        padding: 30px 20px;
+    }
+
+}
 
 /* =========================================================
    FOOTER CONTACT - FIXED
