@@ -9,27 +9,276 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>
-       Videos | Student's Welfare Academy
+        Videos | Student's Welfare Academy
     </title>
 
-    <!-- Website Logo / Favicon -->
-  <link rel="icon" type="image/png" href="Images/logo.png"> 
 
+    <!-- ==================================================
+         FAVICON
+    ================================================== -->
+
+    <link rel="icon"
+          type="image/png"
+          href="Images/logo.png">
+
+
+    <!-- ==================================================
+         META DESCRIPTION
+    ================================================== -->
 
     <meta name="description"
           content="Student's Welfare Academy - Quality Education, Competitive Examination Preparation and Student Guidance">
 
+
+    <!-- ==================================================
+         MAIN CSS
+    ================================================== -->
+
     <link rel="stylesheet"
           href="style.css">
+
+
+    <!-- ==================================================
+         MOBILE MENU + VIDEO CSS
+    ================================================== -->
+
+    <style>
+
+        /* ================================================
+           MOBILE MENU BUTTON
+        ================================================ */
+
+        .menu-button {
+
+            display: none;
+
+            background: transparent;
+
+            border: none;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            padding: 5px 10px;
+
+            color: #222;
+
+            line-height: 1;
+
+            z-index: 1001;
+
+        }
+
+
+        /* ================================================
+           MOBILE NAVIGATION
+        ================================================ */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+
+                position: relative;
+
+            }
+
+
+            /* Show mobile button */
+
+            .menu-button {
+
+                display: block;
+
+                margin-left: auto;
+
+            }
+
+
+            /* Hide menu initially */
+
+            nav#navigation {
+
+                display: none;
+
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                width: 100%;
+
+                background: #ffffff;
+
+                flex-direction: column;
+
+                padding: 10px 0;
+
+                box-shadow:
+                    0 5px 15px rgba(0, 0, 0, 0.15);
+
+                z-index: 1000;
+
+            }
+
+
+            /* Show menu */
+
+            nav#navigation.show {
+
+                display: flex;
+
+            }
+
+
+            /* Navigation links */
+
+            nav#navigation a {
+
+                display: block;
+
+                width: 100%;
+
+                padding: 14px 20px;
+
+                text-align: center;
+
+                text-decoration: none;
+
+            }
+
+
+            /* Mobile logo */
+
+            .logo-area {
+
+                display: flex;
+
+                align-items: center;
+
+            }
+
+
+            .logo-area img {
+
+                max-width: 55px;
+
+                height: auto;
+
+            }
+
+
+            .logo-area h2 {
+
+                font-size: 16px;
+
+                margin: 0;
+
+            }
+
+
+            .logo-area span {
+
+                font-size: 11px;
+
+            }
+
+        }
+
+
+
+        /* ================================================
+           VIDEO GRID
+        ================================================ */
+
+        .video-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 30px;
+
+        }
+
+
+        /* Video container */
+
+        .video {
+
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            overflow: hidden;
+
+            border-radius: 10px;
+
+        }
+
+
+        /* YouTube iframe */
+
+        .video iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: none;
+
+            display: block;
+
+        }
+
+
+        /* ================================================
+           MOBILE VIDEO LAYOUT
+        ================================================ */
+
+        @media (max-width: 768px) {
+
+            .video-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+            }
+
+        }
+
+
+        /* ================================================
+           SMALL MOBILE DEVICES
+        ================================================ */
+
+        @media (max-width: 480px) {
+
+            .video-grid {
+
+                gap: 15px;
+
+            }
+
+            .video {
+
+                border-radius: 8px;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
 
 <body>
-
-
-
-
 
 
 <!-- ==================================================
@@ -41,7 +290,9 @@
     <div class="container navbar">
 
 
-        <!-- LOGO -->
+        <!-- ==================================================
+             LOGO
+        ================================================== -->
 
         <div class="logo-area">
 
@@ -65,17 +316,29 @@
             </div>
 
         </div>
-<!-- MOBILE MENU BUTTON -->
+
+
+
+        <!-- ==================================================
+             MOBILE MENU BUTTON
+        ================================================== -->
+
         <button type="button"
-        class="menu-button"
-        id="menu-button"
-        aria-label="Open Menu"
-        aria-expanded="false">
+                class="menu-button"
+                id="menu-button"
+                aria-label="Open Menu"
+                aria-expanded="false"
+                onclick="openMenu()">
 
-    ☰
+            ☰
 
-</button>
-        <!-- ONLY 4 NAVIGATION BUTTONS -->
+        </button>
+
+
+
+        <!-- ==================================================
+             NAVIGATION
+        ================================================== -->
 
         <nav id="navigation">
 
@@ -87,7 +350,8 @@
                 About Us
             </a>
 
-            <a href="videos.html">
+            <a href="videos.html"
+               class="active">
                 Videos
             </a>
 
@@ -105,23 +369,7 @@
 
 
 <!-- ==================================================
-     HOME SECTION
-================================================== -->
-
-<section id="home">
-
-    <div class="container">
-
-        <!-- Your existing homepage content goes here -->
-
-    </div>
-
-</section>
-
-
-
-<!-- ==================================================
-     VIDEOS
+     VIDEOS SECTION
 ================================================== -->
 
 <section id="videos"
@@ -129,6 +377,10 @@
 
     <div class="container">
 
+
+        <!-- ==================================================
+             SECTION HEADING
+        ================================================== -->
 
         <div class="section-heading">
 
@@ -144,16 +396,23 @@
 
 
 
+        <!-- ==================================================
+             VIDEO GRID
+        ================================================== -->
+
         <div class="video-grid">
 
 
-            <!-- VIDEO 1 -->
+            <!-- ==================================================
+                 VIDEO 1
+            ================================================== -->
 
             <div class="video">
 
                 <iframe
                     src="https://www.youtube.com/embed/ifBmN4zAwCY"
                     title="Student's Welfare Academy Video 1"
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
@@ -162,13 +421,16 @@
 
 
 
-            <!-- VIDEO 2 -->
+            <!-- ==================================================
+                 VIDEO 2
+            ================================================== -->
 
             <div class="video">
 
                 <iframe
                     src="https://www.youtube.com/embed/ZcQHLMCkoTo"
                     title="Student's Welfare Academy Video 2"
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
@@ -193,7 +455,9 @@
     <div class="container footer-grid">
 
 
-        <!-- ABOUT -->
+        <!-- ==================================================
+             ABOUT
+        ================================================== -->
 
         <div>
 
@@ -202,15 +466,19 @@
             </h2>
 
             <p>
+
                 Empowering students through
                 quality education and guidance.
+
             </p>
 
         </div>
 
 
 
-        <!-- QUICK LINKS -->
+        <!-- ==================================================
+             QUICK LINKS
+        ================================================== -->
 
         <div>
 
@@ -238,7 +506,9 @@
 
 
 
-        <!-- CONTACT -->
+        <!-- ==================================================
+             CONTACT
+        ================================================== -->
 
         <div>
 
@@ -261,12 +531,13 @@
         </div>
 
 
-
-       
-
+    </div>
 
 
-    <!-- COPYRIGHT -->
+
+    <!-- ==================================================
+         COPYRIGHT
+    ================================================== -->
 
     <div class="copyright">
 
@@ -285,14 +556,110 @@
 
 <script>
 
-function openMenu() {
 
-    const navigation =
-        document.getElementById("navigation");
+    /* ==================================================
+       OPEN / CLOSE MOBILE MENU
+    ================================================== */
 
-    navigation.classList.toggle("show");
+    function openMenu() {
 
-}
+        const navigation =
+            document.getElementById("navigation");
+
+        const menuButton =
+            document.getElementById("menu-button");
+
+
+        /* Toggle menu */
+
+        navigation.classList.toggle("show");
+
+
+        /* Check menu state */
+
+        const isOpen =
+            navigation.classList.contains("show");
+
+
+        /* Update accessibility */
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+
+        /* Change button */
+
+        if (isOpen) {
+
+            menuButton.innerHTML = "✕";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Close Menu"
+            );
+
+        } else {
+
+            menuButton.innerHTML = "☰";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open Menu"
+            );
+
+        }
+
+    }
+
+
+
+    /* ==================================================
+       CLOSE MENU AFTER NAVIGATION
+    ================================================== */
+
+    document
+        .querySelectorAll("#navigation a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const navigation =
+                        document.getElementById("navigation");
+
+                    const menuButton =
+                        document.getElementById("menu-button");
+
+
+                    /* Close menu */
+
+                    navigation.classList.remove("show");
+
+
+                    /* Reset button */
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    menuButton.setAttribute(
+                        "aria-label",
+                        "Open Menu"
+                    );
+
+
+                    menuButton.innerHTML = "☰";
+
+                }
+            );
+
+        });
+
 
 </script>
 
