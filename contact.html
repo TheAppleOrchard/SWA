@@ -12,15 +12,210 @@
         Contact Us | Student's Welfare Academy
     </title>
 
+    <!-- Favicon -->
     <link rel="icon"
           type="image/png"
           href="Images/logo.png">
 
+    <!-- SEO Description -->
     <meta name="description"
           content="Contact Student's Welfare Academy for admission, courses, student guidance and educational information.">
 
+    <!-- Main CSS -->
     <link rel="stylesheet"
           href="style.css">
+
+
+    <!-- ==================================================
+         MOBILE MENU CSS
+    ================================================== -->
+
+    <style>
+
+        /* ================================================
+           MOBILE MENU BUTTON
+        ================================================ */
+
+        .menu-button {
+
+            display: none;
+
+            background: transparent;
+
+            border: none;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            padding: 5px 10px;
+
+            color: #222;
+
+            line-height: 1;
+
+            z-index: 1001;
+
+        }
+
+
+        /* ================================================
+           MOBILE RESPONSIVE NAVIGATION
+        ================================================ */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+
+                position: relative;
+
+            }
+
+
+            /* Show hamburger button */
+
+            .menu-button {
+
+                display: block;
+
+                margin-left: auto;
+
+            }
+
+
+            /* Hide navigation initially */
+
+            nav#main-menu {
+
+                display: none;
+
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                width: 100%;
+
+                background: #ffffff;
+
+                flex-direction: column;
+
+                padding: 10px 0;
+
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+                z-index: 1000;
+
+            }
+
+
+            /* Show navigation */
+
+            nav#main-menu.show {
+
+                display: flex;
+
+            }
+
+
+            /* Navigation links */
+
+            nav#main-menu a {
+
+                display: block;
+
+                width: 100%;
+
+                padding: 14px 20px;
+
+                text-align: center;
+
+                text-decoration: none;
+
+            }
+
+
+            /* Mobile logo */
+
+            .logo-area {
+
+                display: flex;
+
+                align-items: center;
+
+            }
+
+
+            .logo-area img {
+
+                max-width: 55px;
+
+                height: auto;
+
+            }
+
+
+            .logo-area h2 {
+
+                font-size: 16px;
+
+                margin: 0;
+
+            }
+
+
+            .logo-area span {
+
+                font-size: 11px;
+
+            }
+
+        }
+
+
+        /* ================================================
+           CONTACT MOBILE IMPROVEMENTS
+        ================================================ */
+
+        @media (max-width: 600px) {
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+            }
+
+
+            .contact-card {
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 28px;
+
+            }
+
+
+            .section-heading p {
+
+                font-size: 15px;
+
+                line-height: 1.6;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -36,7 +231,10 @@
 
     <div class="container navbar">
 
-        <!-- LOGO -->
+
+        <!-- ==================================================
+             LOGO
+        ================================================== -->
 
         <div class="logo-area">
 
@@ -60,17 +258,29 @@
             </div>
 
         </div>
-<!-- MOBILE MENU BUTTON -->
+
+
+
+        <!-- ==================================================
+             MOBILE MENU BUTTON
+        ================================================== -->
+
         <button type="button"
-        class="menu-button"
-        id="menu-button"
-        aria-label="Open Menu"
-        aria-expanded="false">
+                class="menu-button"
+                id="menu-button"
+                aria-label="Open Menu"
+                aria-expanded="false"
+                onclick="openMenu()">
 
-    ☰
+            ☰
 
-</button>
-        <!-- NAVIGATION -->
+        </button>
+
+
+
+        <!-- ==================================================
+             NAVIGATION
+        ================================================== -->
 
         <nav id="main-menu">
 
@@ -88,7 +298,7 @@
 
             <a href="contact.html"
                class="active">
-                Contact
+                Contact Us
             </a>
 
         </nav>
@@ -109,7 +319,9 @@
     <div class="container">
 
 
-        <!-- SECTION HEADING -->
+        <!-- ==================================================
+             SECTION HEADING
+        ================================================== -->
 
         <div class="section-heading">
 
@@ -122,20 +334,27 @@
             </h2>
 
             <p>
-                Have a question about our courses, admissions
-                or student guidance? Contact Student's Welfare
-                Academy.
+
+                Have a question about our courses,
+                admissions or student guidance?
+                Contact Student's Welfare Academy.
+
             </p>
 
         </div>
 
 
-        <!-- CONTACT CARDS -->
+
+        <!-- ==================================================
+             CONTACT CARDS
+        ================================================== -->
 
         <div class="contact-grid">
 
 
-            <!-- PHONE -->
+            <!-- ==================================================
+                 PHONE
+            ================================================== -->
 
             <div class="contact-card">
 
@@ -158,7 +377,10 @@
             </div>
 
 
-            <!-- EMAIL -->
+
+            <!-- ==================================================
+                 EMAIL
+            ================================================== -->
 
             <div class="contact-card">
 
@@ -181,7 +403,10 @@
             </div>
 
 
-            <!-- REGISTRATION -->
+
+            <!-- ==================================================
+                 REGISTRATION
+            ================================================== -->
 
             <div class="contact-card">
 
@@ -200,7 +425,10 @@
             </div>
 
 
-            <!-- LOCATION -->
+
+            <!-- ==================================================
+                 LOCATION
+            ================================================== -->
 
             <div class="contact-card">
 
@@ -213,8 +441,10 @@
                 </h3>
 
                 <p>
+
                     Near Punjab National Bank Jubbal,
                     Distt. Shimla, Himachal Pradesh, India
+
                 </p>
 
             </div>
@@ -237,7 +467,9 @@
     <div class="container footer-grid">
 
 
-        <!-- ABOUT -->
+        <!-- ==================================================
+             ABOUT
+        ================================================== -->
 
         <div>
 
@@ -246,15 +478,20 @@
             </h2>
 
             <p>
+
                 Empowering students through quality
                 education, guidance and competitive
                 examination preparation.
+
             </p>
 
         </div>
 
 
-        <!-- QUICK LINKS -->
+
+        <!-- ==================================================
+             QUICK LINKS
+        ================================================== -->
 
         <div>
 
@@ -275,13 +512,16 @@
             </a>
 
             <a href="contact.html">
-                Contact
+                Contact Us
             </a>
 
         </div>
 
 
-        <!-- CONTACT -->
+
+        <!-- ==================================================
+             CONTACT
+        ================================================== -->
 
         <div>
 
@@ -304,17 +544,12 @@
         </div>
 
 
-        <!-- WEBSITE -->
-
-        <div>
-
-        </div>
-
-
     </div>
 
 
-    <!-- COPYRIGHT -->
+    <!-- ==================================================
+         COPYRIGHT
+    ================================================== -->
 
     <div class="copyright">
 
@@ -333,13 +568,110 @@
 
 <script>
 
-function openMenu() {
 
-    const menu = document.getElementById("main-menu");
+    /* ==================================================
+       OPEN / CLOSE MOBILE MENU
+    ================================================== */
 
-    menu.classList.toggle("active");
+    function openMenu() {
 
-}
+        const menu =
+            document.getElementById("main-menu");
+
+        const menuButton =
+            document.getElementById("menu-button");
+
+
+        /* Toggle menu */
+
+        menu.classList.toggle("show");
+
+
+        /* Check whether menu is open */
+
+        const isOpen =
+            menu.classList.contains("show");
+
+
+        /* Update accessibility */
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+
+        /* Change icon */
+
+        if (isOpen) {
+
+            menuButton.innerHTML = "✕";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Close Menu"
+            );
+
+        } else {
+
+            menuButton.innerHTML = "☰";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open Menu"
+            );
+
+        }
+
+    }
+
+
+
+    /* ==================================================
+       CLOSE MENU AFTER CLICKING A LINK
+    ================================================== */
+
+    document
+        .querySelectorAll("#main-menu a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const menu =
+                        document.getElementById("main-menu");
+
+                    const menuButton =
+                        document.getElementById("menu-button");
+
+
+                    /* Close menu */
+
+                    menu.classList.remove("show");
+
+
+                    /* Reset button */
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    menuButton.setAttribute(
+                        "aria-label",
+                        "Open Menu"
+                    );
+
+
+                    menuButton.innerHTML = "☰";
+
+                }
+            );
+
+        });
+
 
 </script>
 
