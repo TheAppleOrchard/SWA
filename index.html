@@ -11,13 +11,16 @@
     <title>
         Student's Welfare Academy
     </title>
-    
-    <!-- Website Logo / Favicon -->
-  <link rel="icon" type="image/png" href="Images/logo.png"> 
+
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/png"
+          href="Images/logo.png">
 
     <meta name="description"
           content="Student's Welfare Academy - Quality Education, Competitive Examination Preparation and Student Guidance">
 
+    <!-- Main CSS -->
     <link rel="stylesheet"
           href="style.css">
 
@@ -27,11 +30,8 @@
 <body>
 
 
-
-
-
 <!-- ==================================================
-     NAVIGATION
+     HEADER / NAVIGATION
 ================================================== -->
 
 <header>
@@ -65,22 +65,22 @@
         </div>
 
 
+        <!-- MOBILE MENU BUTTON -->
 
-        <!-- MOBILE MENU -->
+        <button type="button"
+                class="menu-button"
+                id="menu-button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
 
-        <button
-    type="button"
-    class="menu-button"
-    onclick="openMenu()"
-    aria-label="Open Menu">
+            ☰
 
-    ☰
+        </button>
 
-</button>
 
-<!-- ONLY 4 NAVIGATION BUTTONS -->
+        <!-- NAVIGATION -->
 
-        <nav id="navigation">
+        <nav id="main-menu">
 
             <a href="index.html"
                class="active">
@@ -108,157 +108,58 @@
 
 
 <!-- ==================================================
-     HERO SECTION
+     HERO
 ================================================== -->
 
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="container hero-content">
 
-        
-        <h1>
-            Welcome to<br>
-            <span>Student's Welfare<br>Academy</span>
-        </h1>
+        <div class="hero-text">
 
-        <p>
-            Empowering Students Through Quality Education,
-            Guidance and Excellence.
-        </p>
+            <h1>
 
-        <div class="hero-buttons">
-            <a href="#" class="join-btn">Join Now</a>
-            <a href="#" class="explore-btn">Explore Courses</a>
+                Welcome to
+
+                <span>
+                    Student's Welfare<br>
+                    Academy
+                </span>
+
+            </h1>
+
+
+            <p>
+                Empowering Students Through Quality Education,
+                Guidance and Excellence.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#registration"
+                   class="btn primary">
+
+                    Join Now
+
+                </a>
+
+
+                <a href="#courses"
+                   class="btn secondary">
+
+                    Explore Courses
+
+                </a>
+
+            </div>
+
         </div>
 
     </div>
 
-   
-
 </section>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.hero {
-    min-height: 100vh;
-    position: relative;
-
-    /* BACKGROUND IMAGE */
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(20, 45, 65, 0.88),
-            rgba(20, 45, 65, 0.35)
-        ),
-        url("Images/hero.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-    padding: 80px 6%;
-    overflow: hidden;
-}
-
-.hero-content {
-    max-width: 850px;
-    color: white;
-}
-
-.admission-badge {
-    display: inline-block;
-    background: #f58220;
-    padding: 15px 24px;
-    border-radius: 40px;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: clamp(50px, 6vw, 82px);
-    line-height: 1.08;
-    font-weight: 800;
-}
-
-h1 span {
-    color: #ffab19;
-}
-
-.hero p {
-    font-size: 24px;
-    margin-top: 35px;
-    line-height: 1.5;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 18px;
-    margin-top: 40px;
-}
-
-.hero-buttons a {
-    text-decoration: none;
-    padding: 18px 32px;
-    border-radius: 40px;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.join-btn {
-    background: #f58220;
-    color: white;
-}
-
-.explore-btn {
-    border: 2px solid white;
-    color: white;
-    background: transparent;
-}
-
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-    .hero {
-        min-height: 100vh;
-        padding: 60px 25px;
-        background-position: center;
-    }
-
-    h1 {
-        font-size: 48px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        width: fit-content;
-    }
-
-    .hero-buttons a {
-        font-size: 17px;
-        padding: 15px 25px;
-    }
-
-    .admission-badge {
-        font-size: 16px;
-        padding: 12px 18px;
-    }
-
-    
-}
-</style>
 
 
 <!-- ==================================================
@@ -345,7 +246,7 @@ h1 span {
             </span>
 
             <h2>
-                Courses & Preparation
+                Courses &amp; Preparation
             </h2>
 
             <p>
@@ -354,7 +255,6 @@ h1 span {
             </p>
 
         </div>
-
 
 
         <div class="course-grid">
@@ -384,7 +284,6 @@ h1 span {
             </div>
 
 
-
             <!-- COURSE 2 -->
 
             <div class="course-card">
@@ -408,7 +307,6 @@ h1 span {
                 </a>
 
             </div>
-
 
 
             <!-- COURSE 3 -->
@@ -435,7 +333,6 @@ h1 span {
             </div>
 
 
-
             <!-- COURSE 4 -->
 
             <div class="course-card">
@@ -460,7 +357,6 @@ h1 span {
             </div>
 
 
-
             <!-- COURSE 5 -->
 
             <div class="course-card">
@@ -483,7 +379,6 @@ h1 span {
                 </a>
 
             </div>
-
 
 
             <!-- COURSE 6 -->
@@ -540,7 +435,6 @@ h1 span {
         </div>
 
 
-
         <div class="features">
 
 
@@ -562,7 +456,6 @@ h1 span {
             </div>
 
 
-
             <div class="feature">
 
                 <div>
@@ -581,7 +474,6 @@ h1 span {
             </div>
 
 
-
             <div class="feature">
 
                 <div>
@@ -598,7 +490,6 @@ h1 span {
                 </p>
 
             </div>
-
 
 
             <div class="feature">
@@ -650,7 +541,6 @@ h1 span {
         </div>
 
 
-
         <div class="achievement-grid">
 
 
@@ -676,7 +566,6 @@ h1 span {
             </div>
 
 
-
             <div class="achievement-card">
 
                 <img src="Images/student2.png"
@@ -696,7 +585,6 @@ h1 span {
                 </div>
 
             </div>
-
 
 
             <div class="achievement-card">
@@ -761,10 +649,6 @@ h1 span {
 
 
 
-
-
-
-
 <!-- ==================================================
      REGISTRATION
 ================================================== -->
@@ -774,6 +658,8 @@ h1 span {
 
     <div class="container registration-container">
 
+
+        <!-- REGISTRATION INFORMATION -->
 
         <div>
 
@@ -799,15 +685,17 @@ h1 span {
         </div>
 
 
+        <!-- FORM -->
 
         <form class="registration-form"
-              onsubmit="submitForm(event)">
+              id="registration-form">
 
 
             <input
                 type="text"
                 name="student_name"
                 placeholder="Student Name"
+                autocomplete="name"
                 required>
 
 
@@ -815,13 +703,15 @@ h1 span {
                 type="tel"
                 name="mobile"
                 placeholder="Mobile Number"
+                autocomplete="tel"
                 required>
 
 
             <input
                 type="email"
                 name="email"
-                placeholder="Email Address">
+                placeholder="Email Address"
+                autocomplete="email">
 
 
             <select name="course"
@@ -831,27 +721,27 @@ h1 span {
                     Select Course
                 </option>
 
-                <option>
+                <option value="Classes 1st to 12th">
                     Classes 1st to 12th
                 </option>
 
-                <option>
+                <option value="HP Patwari">
                     HP Patwari
                 </option>
 
-                <option>
+                <option value="JNVST">
                     JNVST
                 </option>
 
-                <option>
+                <option value="Sainik School">
                     Sainik School
                 </option>
 
-                <option>
+                <option value="Olympiads">
                     Olympiads
                 </option>
 
-                <option>
+                <option value="Government Jobs">
                     Government Jobs
                 </option>
 
@@ -903,7 +793,6 @@ h1 span {
         </div>
 
 
-
         <!-- QUICK LINKS -->
 
         <div>
@@ -931,7 +820,6 @@ h1 span {
         </div>
 
 
-
         <!-- CONTACT -->
 
         <div>
@@ -955,12 +843,7 @@ h1 span {
         </div>
 
 
-
-        
-
-
     </div>
-
 
 
     <!-- COPYRIGHT -->
@@ -976,17 +859,140 @@ h1 span {
 
 
 
-
-
-
 <!-- ==================================================
      JAVASCRIPT
 ================================================== -->
 
-<script src="script.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ==============================================
+       MOBILE MENU
+    ============================================== */
+
+    const menuButton =
+        document.getElementById("menu-button");
+
+    const mainMenu =
+        document.getElementById("main-menu");
+
+
+    if (menuButton && mainMenu) {
+
+        menuButton.addEventListener("click", function () {
+
+            mainMenu.classList.toggle("active");
+
+            const isOpen =
+                mainMenu.classList.contains("active");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            menuButton.innerHTML =
+                isOpen ? "✕" : "☰";
+
+        });
+
+
+        /* Close menu after clicking a link */
+
+        const menuLinks =
+            mainMenu.querySelectorAll("a");
+
+        menuLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mainMenu.classList.remove("active");
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuButton.innerHTML = "☰";
+
+            });
+
+        });
+
+    }
+
+
+    /* ==============================================
+       REGISTRATION FORM
+    ============================================== */
+
+    const form =
+        document.getElementById("registration-form");
+
+
+    if (form) {
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const studentName =
+                form.elements["student_name"].value.trim();
+
+            if (!studentName) {
+
+                alert("Please enter the student name.");
+
+                return;
+
+            }
+
+            alert(
+                "Thank you, " +
+                studentName +
+                "! Your registration details have been submitted."
+            );
+
+            form.reset();
+
+        });
+
+    }
+
+
+    /* ==============================================
+       CLOSE MOBILE MENU WHEN RESIZING
+    ============================================== */
+
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 900) {
+
+            if (mainMenu) {
+                mainMenu.classList.remove("active");
+            }
+
+            if (menuButton) {
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuButton.innerHTML = "☰";
+
+            }
+
+        }
+
+    });
+
+});
+
+</script>
 
 
 </body>
 
 </html>
-```
