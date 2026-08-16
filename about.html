@@ -13,8 +13,9 @@
     </title>
 
     <!-- Website Logo / Favicon -->
-  <link rel="icon" type="image/png" href="Images/logo.png"> 
-
+    <link rel="icon"
+          type="image/png"
+          href="Images/logo.png">
 
     <meta name="description"
           content="Learn about Student's Welfare Academy, our vision, mission, faculty and commitment to quality education.">
@@ -22,14 +23,160 @@
     <link rel="stylesheet"
           href="style.css">
 
+
+    <!-- ==================================================
+         MOBILE MENU CSS
+    ================================================== -->
+
+    <style>
+
+        /* -----------------------------------------------
+           MOBILE MENU BUTTON
+        ------------------------------------------------ */
+
+        .menu-button {
+
+            display: none;
+
+            background: transparent;
+
+            border: none;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            padding: 5px 10px;
+
+            color: #222;
+
+            line-height: 1;
+
+            z-index: 1001;
+
+        }
+
+
+        /* -----------------------------------------------
+           MOBILE NAVIGATION
+        ------------------------------------------------ */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+
+                position: relative;
+
+            }
+
+
+            /* Show hamburger button */
+
+            .menu-button {
+
+                display: block;
+
+                margin-left: auto;
+
+            }
+
+
+            /* Hide navigation initially */
+
+            nav#navigation {
+
+                display: none;
+
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                width: 100%;
+
+                background: #ffffff;
+
+                flex-direction: column;
+
+                padding: 10px 0;
+
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+                z-index: 1000;
+
+            }
+
+
+            /* Show navigation */
+
+            nav#navigation.show {
+
+                display: flex;
+
+            }
+
+
+            /* Navigation links */
+
+            nav#navigation a {
+
+                display: block;
+
+                width: 100%;
+
+                padding: 14px 20px;
+
+                text-align: center;
+
+                text-decoration: none;
+
+            }
+
+
+            /* Logo area */
+
+            .logo-area {
+
+                display: flex;
+
+                align-items: center;
+
+            }
+
+
+            .logo-area img {
+
+                max-width: 55px;
+
+                height: auto;
+
+            }
+
+
+            .logo-area h2 {
+
+                font-size: 16px;
+
+                margin: 0;
+
+            }
+
+
+            .logo-area span {
+
+                font-size: 11px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
-
-
-
-
 
 
 <!-- ==================================================
@@ -65,17 +212,27 @@
             </div>
 
         </div>
-<!-- MOBILE MENU BUTTON -->
+
+
+        <!-- ==================================================
+             MOBILE MENU BUTTON
+        ================================================== -->
+
         <button type="button"
-        class="menu-button"
-        id="menu-button"
-        aria-label="Open Menu"
-        aria-expanded="false">
+                class="menu-button"
+                id="menu-button"
+                aria-label="Open Menu"
+                aria-expanded="false"
+                onclick="openMenu()">
 
-    ☰
+            ☰
 
-</button>
-        <!-- ONLY 4 NAVIGATION BUTTONS -->
+        </button>
+
+
+        <!-- ==================================================
+             NAVIGATION
+        ================================================== -->
 
         <nav id="navigation">
 
@@ -97,7 +254,6 @@
             </a>
 
         </nav>
-
 
     </div>
 
@@ -123,7 +279,6 @@
                  alt="Student's Welfare Academy">
 
         </div>
-
 
 
         <!-- ABOUT CONTENT -->
@@ -208,36 +363,52 @@
         <div class="about-content">
 
             <p>
+
                 We offer coaching for
                 <strong>Classes 4th to 12th</strong>,
                 along with specialized preparation for
-                <strong>JNVST (Jawahar Navodaya Vidyalaya),
-                Sainik School, Military School,
-                Olympiads, Government Job Examinations,
-                Banking</strong>, and other competitive
-                entrance examinations.
+                <strong>
+                    JNVST (Jawahar Navodaya Vidyalaya),
+                    Sainik School, Military School,
+                    Olympiads, Government Job Examinations,
+                    Banking
+                </strong>,
+                and other competitive entrance examinations.
+
             </p>
 
+
             <p>
+
                 Our experienced faculty, student-focused
                 teaching methodology, regular assessments,
                 and personalized mentoring ensure that
                 every learner receives the attention they
                 deserve.
+
             </p>
 
+
             <p>
-                At <strong>Student's Welfare Academy</strong>,
+
+                At
+                <strong>
+                    Student's Welfare Academy
+                </strong>,
                 we believe that education is not just about
                 scoring marks. It is about developing skills,
                 values, critical thinking, and lifelong
                 confidence.
+
             </p>
 
+
             <p>
+
                 We strive to create a supportive learning
                 environment where every student can unlock
                 their full potential.
+
             </p>
 
         </div>
@@ -315,7 +486,6 @@
                 </div>
 
             </div>
-
 
         </div>
 
@@ -406,7 +576,6 @@
         </div>
 
 
-
         <!-- QUICK LINKS -->
 
         <div>
@@ -434,7 +603,6 @@
         </div>
 
 
-
         <!-- CONTACT -->
 
         <div>
@@ -457,9 +625,7 @@
 
         </div>
 
-
-
-      
+    </div>
 
 
     <!-- COPYRIGHT -->
@@ -481,14 +647,105 @@
 
 <script>
 
-function openMenu() {
+    /* -----------------------------------------------
+       OPEN / CLOSE MOBILE MENU
+    ------------------------------------------------ */
 
-    const navigation =
-        document.getElementById("navigation");
+    function openMenu() {
 
-    navigation.classList.toggle("show");
+        const navigation =
+            document.getElementById("navigation");
 
-}
+        const menuButton =
+            document.getElementById("menu-button");
+
+
+        /* Toggle menu */
+
+        navigation.classList.toggle("show");
+
+
+        /* Check menu status */
+
+        const isOpen =
+            navigation.classList.contains("show");
+
+
+        /* Update accessibility */
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+
+        /* Change button icon */
+
+        if (isOpen) {
+
+            menuButton.innerHTML = "✕";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Close Menu"
+            );
+
+        } else {
+
+            menuButton.innerHTML = "☰";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open Menu"
+            );
+
+        }
+
+    }
+
+
+
+    /* -----------------------------------------------
+       CLOSE MENU AFTER CLICKING A LINK
+    ------------------------------------------------ */
+
+    document
+        .querySelectorAll("#navigation a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const navigation =
+                        document.getElementById("navigation");
+
+                    const menuButton =
+                        document.getElementById("menu-button");
+
+
+                    navigation.classList.remove("show");
+
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    menuButton.setAttribute(
+                        "aria-label",
+                        "Open Menu"
+                    );
+
+
+                    menuButton.innerHTML = "☰";
+
+                }
+            );
+
+        });
+
 
 </script>
 
@@ -496,4 +753,3 @@ function openMenu() {
 </body>
 
 </html>
-```
