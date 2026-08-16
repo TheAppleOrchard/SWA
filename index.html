@@ -108,72 +108,174 @@
      HERO SECTION
 ================================================== -->
 
-<section id="home"
-         class="hero">
+<section class="hero">
 
-    <div class="hero-overlay"></div>
+    <div class="hero-content">
 
-    <div class="container hero-content">
+        
+        <h1>
+            Welcome to<br>
+            <span>Student's Welfare<br>Academy</span>
+        </h1>
 
-        <div class="hero-text">
+        <p>
+            Empowering Students Through Quality Education,
+            Guidance and Excellence.
+        </p>
 
-           
-
-            <h1>
-
-                Welcome to
-
-                <span>
-                    Student's Welfare Academy
-                </span>
-
-            </h1>
-
-            <p>
-
-                Empowering Students Through
-                Quality Education, Guidance
-                and Excellence.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a href="#registration"
-                   class="btn primary">
-
-                    Join Now
-
-                </a>
-
-                <a href="#courses"
-                   class="btn secondary">
-
-                    Explore Courses
-
-                </a>
-<section class="hero-image"></section>
-
-<style>
-.hero-image {
-    width: 100%;
-    height: 500px;
-
-    background-image: url("hero.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-</style>
-            </div>
-
+        <div class="hero-buttons">
+            <a href="#" class="join-btn">Join Now</a>
+            <a href="#" class="explore-btn">Explore Courses</a>
         </div>
 
     </div>
 
+    <a href="#" class="whatsapp-btn">WhatsApp</a>
+
 </section>
 
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    /* BACKGROUND IMAGE */
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 65, 0.88),
+            rgba(20, 45, 65, 0.35)
+        ),
+        url("Images/hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 80px 6%;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+    color: white;
+}
+
+.admission-badge {
+    display: inline-block;
+    background: #f58220;
+    padding: 15px 24px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: clamp(50px, 6vw, 82px);
+    line-height: 1.08;
+    font-weight: 800;
+}
+
+h1 span {
+    color: #ffab19;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-top: 35px;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    padding: 18px 32px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.join-btn {
+    background: #f58220;
+    color: white;
+}
+
+.explore-btn {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.whatsapp-btn {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+
+    padding: 20px 28px;
+    border-radius: 40px;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 100vh;
+        padding: 60px 25px;
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .hero-buttons a {
+        font-size: 17px;
+        padding: 15px 25px;
+    }
+
+    .admission-badge {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+
+    .whatsapp-btn {
+        right: 15px;
+        bottom: 15px;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+}
+</style>
 
 
 <!-- ==================================================
