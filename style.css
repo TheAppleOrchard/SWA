@@ -1,100 +1,134 @@
+/* =========================================================
+   STUDENT'S WELFARE ACADEMY
+   MAIN STYLESHEET
+========================================================= */
+
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
-
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #222;
+    background: #fff;
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 
-/* ==============================
+/* =========================================================
    TOP BAR
-============================== */
+========================================================= */
 
 .top-bar {
     background: #102a43;
-    color: white;
+    color: #fff;
     font-size: 14px;
 }
 
-
 .top-content {
+    min-height: 38px;
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
+    align-items: center;
+    gap: 15px;
+    padding: 7px 0;
 }
 
 
-/* ==============================
-   NAVBAR
-============================== */
+/* =========================================================
+   HEADER / NAVBAR
+========================================================= */
 
 header {
-    background: white;
+    background: #fff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
 }
-
 
 .navbar {
     min-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
+
+/* Logo */
 
 .logo-area {
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 0;
 }
-
 
 .logo-area img {
     width: 60px;
     height: 60px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
+.logo-area div {
+    display: flex;
+    flex-direction: column;
+}
 
 .logo-area h2 {
     font-size: 18px;
+    line-height: 1.2;
     color: #102a43;
+    white-space: nowrap;
 }
-
 
 .logo-area span {
     color: #e67e22;
-    font-size: 12px;
-    letter-spacing: 3px;
+    font-size: 11px;
+    letter-spacing: 2px;
     font-weight: bold;
+    margin-top: 3px;
 }
 
+
+/* Navigation */
 
 nav {
     display: flex;
@@ -102,47 +136,63 @@ nav {
     gap: 22px;
 }
 
-
 nav a {
     color: #222;
     font-size: 14px;
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: #e67e22;
 }
 
-
 .nav-register {
     background: #e67e22;
-    color: white !important;
+    color: #fff !important;
     padding: 11px 20px;
     border-radius: 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
+.nav-register:hover {
+    background: #c95f0b;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+
+/* Mobile menu button */
 
 .menu-button {
     display: none;
     border: none;
-    background: none;
+    background: transparent;
+    color: #102a43;
     font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
 }
 
 
-/* ==============================
+/* =========================================================
    HERO
-============================== */
+========================================================= */
 
 .hero {
-    height: 650px;
-
-    background:
-        url("Images/about.jpg");
+    min-height: 650px;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 30, 50, 0.88),
+            rgba(8, 30, 50, 0.45)
+        ),
+        url("Images/hero.png");
 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
     position: relative;
 
@@ -150,153 +200,132 @@ nav a:hover {
     align-items: center;
 }
 
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(8,30,50,.9),
-            rgba(8,30,50,.4)
-        );
-}
-
-
 .hero-content {
+    width: 100%;
     position: relative;
     z-index: 2;
 }
 
-
 .hero-text {
     max-width: 700px;
-    color: white;
+    color: #fff;
 }
 
 .hero h1 {
     font-size: 60px;
     line-height: 1.15;
     margin-bottom: 20px;
+    font-weight: 700;
 }
-
 
 .hero h1 span {
     display: block;
     color: #f5a623;
 }
 
-
 .hero p {
     font-size: 20px;
+    line-height: 1.6;
     margin-bottom: 30px;
+    max-width: 650px;
 }
 
-.hero {
-    background-image:
-        linear-gradient(rgba(20, 40, 55, 0.65), rgba(20, 40, 55, 0.65)),
-        url("images/hero-bg.jpg");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* ==============================
+/* =========================================================
    BUTTONS
-============================== */
+========================================================= */
 
 .btn {
     display: inline-block;
-
     padding: 13px 25px;
-
     border-radius: 30px;
-
     font-weight: bold;
-
-    transition: .3s;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
+.btn:hover {
+    transform: translateY(-2px);
+}
 
 .primary {
     background: #e67e22;
-    color: white;
+    color: #fff;
 }
-
 
 .primary:hover {
     background: #c95f0b;
 }
 
-
 .secondary {
-    border: 2px solid white;
-    color: white;
+    border-color: #fff;
+    color: #fff;
     margin-left: 10px;
+    background: transparent;
 }
-
 
 .secondary:hover {
-    background: white;
+    background: #fff;
     color: #102a43;
 }
-
 
 .white {
-    background: white;
+    background: #fff;
     color: #102a43;
 }
 
 
-/* ==============================
+/* =========================================================
    STATISTICS
-============================== */
+========================================================= */
 
 .statistics {
     background: #102a43;
-    color: white;
+    color: #fff;
 }
-
 
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-
 .stat-box {
     text-align: center;
-    padding: 30px;
-    border-right: 1px solid rgba(255,255,255,.15);
+    padding: 30px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
-
 
 .stat-box:last-child {
-    border: none;
+    border-right: none;
 }
-
 
 .stat-box h2 {
     color: #f5a623;
     font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    font-size: 14px;
 }
 
 
-/* ==============================
-   SECTIONS
-============================== */
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
 
 .section {
     padding: 90px 0;
 }
 
-
 .light {
     background: #f6f9fc;
 }
-
 
 .section-heading {
     text-align: center;
@@ -304,26 +333,30 @@ nav a:hover {
     margin: 0 auto 50px;
 }
 
-
 .section-title {
     color: #e67e22;
     font-weight: bold;
     letter-spacing: 2px;
     font-size: 13px;
+    text-transform: uppercase;
 }
-
 
 .section-heading h2,
 .about-content h2 {
+    color: #111827;
     font-size: 42px;
     line-height: 1.2;
     margin: 12px 0 20px;
 }
 
+.section-heading p {
+    color: #666;
+}
 
-/* ==============================
+
+/* =========================================================
    ABOUT
-============================== */
+========================================================= */
 
 .about-grid {
     display: grid;
@@ -332,12 +365,11 @@ nav a:hover {
     align-items: center;
 }
 
-
 .about-image img {
     width: 100%;
     border-radius: 20px;
+    object-fit: cover;
 }
-
 
 .about-points {
     display: grid;
@@ -347,14 +379,18 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* =========================
+.about-points div {
+    padding: 10px;
+}
+
+
+/* =========================================================
    ABOUT SECTION
-========================= */
+========================================================= */
 
 .about-section {
-    background: #ffffff;
+    background: #fff;
     padding: 70px 6%;
-    font-family: Arial, Helvetica, sans-serif;
     color: #111827;
 }
 
@@ -362,8 +398,6 @@ nav a:hover {
     max-width: 1250px;
     margin: 0 auto;
 }
-
-/* About Text */
 
 .about-content {
     font-size: 16px;
@@ -379,7 +413,10 @@ nav a:hover {
     font-weight: 700;
 }
 
-/* Instructors */
+
+/* =========================================================
+   INSTRUCTORS
+========================================================= */
 
 .instructors-section {
     margin-top: 75px;
@@ -398,16 +435,12 @@ nav a:hover {
     margin: 0 0 28px;
 }
 
-/* Grid */
-
 .instructors-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 150px;
-    row-gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 80px;
+    row-gap: 25px;
 }
-
-/* Instructor */
 
 .instructor {
     display: flex;
@@ -424,6 +457,10 @@ nav a:hover {
     flex-shrink: 0;
 }
 
+.instructor-info {
+    min-width: 0;
+}
+
 .instructor-info h3 {
     margin: 0 0 8px;
     font-size: 19px;
@@ -437,11 +474,558 @@ nav a:hover {
     color: #315b87;
 }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media (max-width: 768px) {
+/* =========================================================
+   COURSES
+========================================================= */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.course-icon {
+    font-size: 45px;
+}
+
+.course-card h3 {
+    margin: 15px 0;
+    color: #102a43;
+}
+
+.course-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.course-card a {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.feature {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.feature > div {
+    font-size: 45px;
+}
+
+.feature h3 {
+    margin: 15px 0 8px;
+    color: #102a43;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.achievement-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.achievement-content {
+    padding: 25px;
+}
+
+
+/* =========================================================
+   BLOG
+========================================================= */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 25px;
+}
+
+.blog-content h3 {
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    background: #102a43;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta span {
+    color: #f5a623;
+    font-weight: bold;
+}
+
+.cta h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 10px 0 15px;
+}
+
+.cta p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+
+/* =========================================================
+   VIDEOS
+========================================================= */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.video {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 350px;
+    display: block;
+    border: none;
+}
+
+
+/* =========================================================
+   REGISTRATION
+========================================================= */
+
+.registration-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px;
+    align-items: center;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.12);
+}
+
+.registration-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    padding: 80px 0;
+    background: #f6f9fc;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: #fff;
+    text-align: center;
+    padding: 30px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card > div {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    color: #102a43;
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #091d2d;
+    color: #fff;
+    padding-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-grid h3 {
+    margin-bottom: 15px;
+}
+
+.footer-grid p {
+    color: #ccc;
+}
+
+.footer-grid a {
+    display: block;
+    color: #ddd;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-grid a:hover {
+    color: #f5a623;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    background: #25d366;
+    color: #fff;
+
+    padding: 14px 20px;
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    z-index: 9999;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .logo-area img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .logo-area h2 {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .stats-grid,
+    .features,
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-grid,
+    .achievement-grid,
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .registration-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        gap: 40px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        background: #fff;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 15px 20px;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px 5px;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-register {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .top-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 3px;
+    }
+
+    .logo-area {
+        gap: 7px;
+    }
+
+    .logo-area img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo-area h2 {
+        font-size: 14px;
+    }
+
+    .logo-area span {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero {
+        min-height: 600px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.15;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .secondary {
+        margin-left: 0;
+    }
+
+    .stats-grid,
+    .course-grid,
+    .features,
+    .achievement-grid,
+    .blog-grid,
+    .video-grid,
+    .contact-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-box {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .stat-box:last-child {
+        border-bottom: none;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .cta h2 {
+        font-size: 32px;
+    }
 
     .about-section {
         padding: 45px 20px;
@@ -450,6 +1034,10 @@ nav a:hover {
     .about-content {
         font-size: 15px;
         line-height: 1.6;
+    }
+
+    .about-points {
+        grid-template-columns: 1fr;
     }
 
     .instructors-section {
@@ -470,9 +1058,9 @@ nav a:hover {
     }
 
     .instructor img {
-        width: 100px;
-        height: 100px;
-        margin-right: 20px;
+        width: 80px;
+        height: 80px;
+        margin-right: 18px;
     }
 
     .instructor-info h3 {
@@ -480,394 +1068,90 @@ nav a:hover {
     }
 
     .instructor-info span {
+        font-size: 15px;
+    }
+
+    .video iframe {
+        height: 240px;
+    }
+
+    .registration-container {
+        gap: 35px;
+    }
+
+    .footer-grid {
+        gap: 30px;
+    }
+
+    .whatsapp {
+        right: 15px;
+        bottom: 15px;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
         font-size: 16px;
     }
-}
 
-/* ==============================
-   COURSES
-============================== */
-
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-
-.course-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,.07);
-    transition: .3s;
-}
-
-
-.course-card:hover {
-    transform: translateY(-8px);
-}
-
-
-.course-icon {
-    font-size: 45px;
-}
-
-
-.course-card h3 {
-    margin: 15px 0;
-}
-
-
-.course-card p {
-    color: #666;
-    margin-bottom: 15px;
-}
-
-
-.course-card a {
-    color: #e67e22;
-    font-weight: bold;
-}
-
-
-/* ==============================
-   FEATURES
-============================== */
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-
-.feature {
-    text-align: center;
-    padding: 30px;
-}
-
-
-.feature > div {
-    font-size: 45px;
-}
-
-
-.feature h3 {
-    margin: 15px 0 8px;
-}
-
-
-/* ==============================
-   ACHIEVEMENTS
-============================== */
-
-.achievement-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-
-.achievement-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0,0,0,.08);
-}
-
-
-.achievement-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-
-.achievement-content {
-    padding: 25px;
-}
-
-
-/* ==============================
-   CTA
-============================== */
-
-.cta {
-    background: #102a43;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-
-.cta span {
-    color: #f5a623;
-    font-weight: bold;
-}
-
-
-.cta h2 {
-    font-size: 42px;
-    margin: 10px 0 15px;
-}
-
-
-
-/* ==============================
-   VIDEOS
-============================== */
-
-.video-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-
-.video iframe {
-    width: 100%;
-    height: 350px;
-    border: none;
-}
-
-
-/* ==============================
-   REGISTRATION
-============================== */
-
-.registration-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-
-.registration-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-
-.registration-form input,
-.registration-form select,
-.registration-form textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 15px;
-}
-
-
-.registration-form textarea {
-    height: 120px;
-}
-
-
-/* ==============================
-   CONTACT
-============================== */
-
-.contact-section {
-    padding: 80px 0;
-    background: #f6f9fc;
-}
-
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-
-.contact-card {
-    background: white;
-    text-align: center;
-    padding: 30px 15px;
-    border-radius: 15px;
-}
-
-
-.contact-card > div {
-    font-size: 35px;
-}
-
-
-/* ==============================
-   FOOTER
-============================== */
-
-footer {
-    background: #091d2d;
-    color: white;
-    padding-top: 60px;
-}
-
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 40px;
-    padding-bottom: 50px;
-}
-
-
-.footer-grid a {
-    display: block;
-    color: #ddd;
-    margin: 5px 0;
-}
-
-
-.footer-grid a:hover {
-    color: #f5a623;
-}
-
-
-.copyright {
-    border-top: 1px solid rgba(255,255,255,.1);
-    text-align: center;
-    padding: 20px;
-    font-size: 13px;
-}
-
-
-/* ==============================
-   WHATSAPP
-============================== */
-
-.whatsapp {
-    position: fixed;
-
-    right: 20px;
-    bottom: 20px;
-
-    background: #25D366;
-
-    color: white;
-
-    padding: 14px 20px;
-
-    border-radius: 30px;
-
-    font-weight: bold;
-
-    z-index: 9999;
-}
-
-
-/* ==============================
-   MOBILE
-============================== */
-
-@media(max-width: 900px) {
-
-    .menu-button {
-        display: block;
+    .btn {
+        padding: 11px 20px;
+        font-size: 14px;
     }
-
-
-    nav {
-        display: none;
-
-        position: absolute;
-
-        top: 80px;
-        left: 0;
-        right: 0;
-
-        background: white;
-
-        flex-direction: column;
-
-        padding: 25px;
-    }
-
-
-    nav.active {
-        display: flex;
-    }
-
-
-    .hero h1 {
-        font-size: 45px;
-    }
-
-
-    .stats-grid,
-    .course-grid,
-    .features,
-    .achievement-grid,
-    .blog-grid,
-    .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    .about-grid,
-    .registration-container {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media(max-width: 600px) {
-
-    .top-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-
-    .hero {
-        height: 600px;
-    }
-
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: flex-start;
-    }
-
-
-    .secondary {
-        margin-left: 0;
-    }
-
-
-    .stats-grid,
-    .course-grid,
-    .features,
-    .achievement-grid,
-    .blog-grid,
-    .video-grid,
-    .contact-grid,
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .section {
-        padding: 60px 0;
-    }
-
 
     .section-heading h2,
     .about-content h2,
     .cta h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
+    .instructor img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(230, 126, 34, 0.45);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
 }
